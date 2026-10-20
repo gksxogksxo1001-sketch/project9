@@ -3,474 +3,689 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="보안관제 직무를 지망하는 주한태의 포트폴리오 및 검증된 프로젝트 기반 자기소개 페이지입니다.">
-  <title>주한태 | 보안관제 포트폴리오</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.0">
+  <meta name="description" content="주한태의 38일간 리추얼 기록 기반 강점 발굴, 성장 서사, 자기소개서 및 포트폴리오 올인원 웹 허브">
+  <title>주한태 | 나만의 리추얼 & 서사 포트폴리오</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <div class="glow-bg"></div>
 
-  <div class="container">
-    <!-- Header / Navigation -->
-    <header class="header">
-      <div class="logo">
-        <span class="status-dot"></span>
-        <span class="logo-text">보안관제 포트폴리오</span>
-      </div>
-      <nav class="nav">
-        <a href="#about">소개</a>
-        <a href="#strengths">핵심 강점 & 근거</a>
-        <a href="#skills">기술 스택</a>
-        <a href="#evidence">프로젝트 검증</a>
-        <a href="#contact">연락처</a>
-        <button type="button" id="motion-toggle-btn" class="motion-btn" aria-pressed="false" title="애니메이션 및 움직임 끄기/켜기">
-          <span class="motion-icon">⚡</span> <span id="motion-btn-text">모션 끄기</span>
+  <!-- App Header & Navigation -->
+  <header class="app-header">
+    <div class="container nav-wrap">
+      <a href="ritual.html" class="brand-logo">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <h1>주한태 리추얼 허브</h1>
+          <span>Daily Ritual & Portfolio Matrix</span>
+        </div>
+      </a>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs">
+        <button type="button" class="nav-tab-btn active" data-tab="tab-portfolio">
+          <span>🌟</span> 포트폴리오 & 서사
+        </button>
+        <button type="button" class="nav-tab-btn" data-tab="tab-strengths">
+          <span>🗺️</span> 강점 지도 & 룰
+        </button>
+        <button type="button" class="nav-tab-btn" data-tab="tab-tracker">
+          <span>⏱️</span> 리추얼 트래커
         </button>
       </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero-card">
-      <div class="profile-area">
-        <div class="profile-img-wrapper">
-          <img src="증명사진.jpg" alt="주한태 프로필 사진" class="profile-img">
-          <span class="badge-role">보안관제 준비생</span>
-        </div>
+      <div class="header-actions">
+        <a href="portfolio-base.html" class="btn-pill" title="기존 보안관제 포트폴리오로 이동">
+          <span>🛡️</span> 보안관제 포트폴리오
+        </a>
+        <a href="doc/narrative-submission.md" target="_blank" class="btn-pill primary" title="과제 제출용 서사 문서 다운로드 및 보기">
+          <span>📄</span> 서사 문서 보기
+        </a>
       </div>
-      <div class="hero-content">
-        <div class="sub-title-tag">정보보안 및 보안관제 엔지니어 지망</div>
-        <h1 class="hero-name">주한태 <span class="en-name">Ju Han-tae</span></h1>
-        <p class="hero-desc">
-          위협을 사전에 감지하고 시스템과 네트워크를 견고하게 보호하는 <strong>보안관제(SOC) 전문가</strong>를 꿈꿉니다.
-          맡은 일에 대한 한계 돌파 책임감, 서비스에 대한 주인의식, 그리고 모르는 것을 끝까지 체득하는 집요함으로 성장하고 있습니다.
-        </p>
-        <div class="tag-list">
-          <span class="tag">#보안관제_지망</span>
-          <span class="tag">#책임감과_한계돌파</span>
-          <span class="tag">#주인의식</span>
-          <span class="tag">#질문과_자기주도학습</span>
-        </div>
+    </div>
+  </header>
 
-        <!-- 1366x768 & 1920x1080 첫 화면 필수 요소: 소개·활동·근거 퀵 요약 매트릭스 -->
-        <div class="first-screen-highlights">
-          <div class="f-col">
-            <span class="f-label">🎯 핵심 소개</span>
-            <span class="f-val">보안관제(SOC) 직무 지망생 주한태</span>
+  <main class="container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: 포트폴리오 & 서사 쇼케이스 (과제 제출 산출물) -->
+    <!-- ========================================== -->
+    <section id="tab-portfolio" class="tab-content active">
+      
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+          <div style="position: relative; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary-light); box-shadow: var(--shadow-glow); flex-shrink: 0;">
+            <img src="증명사진.jpg" alt="주한태 프로필" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
-          <div class="f-col">
-            <span class="f-label">⚡ 주요 활동</span>
-            <span class="f-val">혼밥비서 공공 API / Vision AI / 실시간 채팅 코어 구현</span>
-          </div>
-          <div class="f-col">
-            <span class="f-label">🔗 검증 근거</span>
-            <a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer" class="f-link">
-              GitHub 저장소 & LOG.md ↗
-            </a>
+          <div style="flex: 1; min-width: 280px;">
+            <div class="hero-meta">
+              <span class="badge-tag">38일간의 리추얼 완주</span>
+              <span class="badge-tag emerald">자기소개서 & 포트폴리오 뼈대 확립</span>
+            </div>
+            <h2 class="hero-title">알람 10개의 실행력으로 증명하는 엔지니어, <span class="highlight">주한태</span></h2>
+            <p class="hero-desc">
+              매일 아침과 저녁으로 스스로를 성찰한 38일간의 리추얼을 바탕으로 나만의 에이전트 규칙을 세우고,
+              되풀이된 강점과 고난의 극복 과정을 정직하게 엮어 완성한 <strong>주한태의 서사형 포트폴리오</strong>입니다.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Strengths Section (카드 2: 상황 - 행동 - 결과) -->
-    <section id="strengths" class="section">
-      <div class="section-header">
-        <div class="section-subtitle">핵심 역량 분석</div>
-        <h2 class="section-title">말이 아니라 근거로 증명하는 3가지 강점</h2>
-        <p class="section-desc">실제 팀 프로젝트 개발 과정에서 문제를 마주하고 해결한 [상황 - 행동 - 결과] 기록입니다.</p>
-      </div>
-
-      <div class="strengths-list">
-        <!-- 강점 1 -->
-        <article class="strength-card">
-          <div class="strength-badge-row">
-            <span class="strength-num">핵심 강점 01</span>
-            <span class="strength-core">책임감 & 한계 돌파</span>
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <div class="stat-label">📅 누적 기록 기간</div>
+            <div class="stat-value">38<small>일 (8/11 ~ 10/20)</small></div>
           </div>
-          <h3 class="strength-headline">"내가 맡은 바는 내 수준을 넘어 최선을 다합니다"</h3>
-          
-          <div class="star-grid">
-            <div class="star-item">
-              <span class="star-label situation">상황 (문제 마주하기)</span>
-              <p class="star-text">
-                '혼밥비서' 팀 프로젝트에서 냉장고 재료를 하나씩 수동 입력해야 해 사용자 이탈이 우려되었고, 단순 CRUD 입력만으로는 완성도에 한계가 있던 상황
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label action">행동 (직접 실행한 노력)</span>
-              <p class="star-text">
-                기본 역량 범위를 넘어 <strong>식약처 공공데이터 API 연동</strong> 및 <strong>냉장고 건강점수 알고리즘</strong>을 설계하고, 더 나아가 <strong>영수증 Vision AI 연동 파이프라인</strong>을 선제적으로 구축해 일괄 등록 구현
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label result">결과 (도출된 성과)</span>
-              <p class="star-text">
-                재료 등록 시 5대 영양소가 자동 판별되고 영수증 사진 한 장으로 수십 개 재료가 일괄 등록되는 핵심 킬러 기능으로 평가받음
-              </p>
-            </div>
+          <div class="hero-stat-card">
+            <div class="stat-label">🧘 누적 호흡 명상</div>
+            <div class="stat-value">136<small>분</small></div>
           </div>
-          <div class="strength-footer">
-            <span class="footer-tag">공개 근거</span>
-            <a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer" class="footer-link">
-              혼밥비서 GitHub LOG.md (2026-05-27 ~ 05-29) ↗
-            </a>
+          <div class="hero-stat-card">
+            <div class="stat-label">🚀 회복탄력성 지표</div>
+            <div class="stat-value">30<small>분 조기 출석 전환</small></div>
           </div>
-        </article>
-
-        <!-- 강점 2 -->
-        <article class="strength-card">
-          <div class="strength-badge-row">
-            <span class="strength-num">핵심 강점 02</span>
-            <span class="strength-core">주인의식 & 몰입</span>
+          <div class="hero-stat-card">
+            <div class="stat-label">🤝 동료 상호 감사</div>
+            <div class="stat-value">54<small>회 교환</small></div>
           </div>
-          <h3 class="strength-headline">"내가 하는 일에는 자부심을 가지고 내 일처럼 합니다"</h3>
-          
-          <div class="star-grid">
-            <div class="star-item">
-              <span class="star-label situation">상황 (문제 마주하기)</span>
-              <p class="star-text">
-                브라우저 기본 팝업(alert/confirm)만으로도 과제 요구조건은 통과되지만, 모바일 환경에서 사용성을 크게 해치고 전문성이 떨어져 보였던 상황
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label action">행동 (직접 실행한 노력)</span>
-              <p class="star-text">
-                '내가 매일 쓰는 앱'이라는 주인의식으로 <strong>기본 alert를 전면 제거하고 커스텀 모달</strong>을 구축했으며, 모바일 사용자를 위한 <strong>터치 제스처 스와이프 인터랙션(Touch/Move/Snap)</strong>을 직접 구현
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label result">결과 (도출된 성과)</span>
-              <p class="star-text">
-                모바일과 PC 모두에서 네이티브 앱 수준의 매끄러운 반응형 UX를 구현하여 팀원들로부터 "사용자 입장에서 가장 세심한 인터페이스"라는 호평 획득
-              </p>
-            </div>
-          </div>
-          <div class="strength-footer">
-            <span class="footer-tag">공개 근거</span>
-            <a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer" class="footer-link">
-              혼밥비서 GitHub LOG.md (2026-05-28, 05-29 모바일 제스처 인터랙션) ↗
-            </a>
-          </div>
-        </article>
-
-        <!-- 강점 3 -->
-        <article class="strength-card">
-          <div class="strength-badge-row">
-            <span class="strength-num">핵심 강점 03</span>
-            <span class="strength-core">적극적 소통 & 지식 체득</span>
-          </div>
-          <h3 class="strength-headline">"모르는 것은 적극적으로 묻고 반드시 내 것으로 습득합니다"</h3>
-          
-          <div class="star-grid">
-            <div class="star-item">
-              <span class="star-label situation">상황 (문제 마주하기)</span>
-              <p class="star-text">
-                1:1 실시간 채팅 및 게시판 구현 중 Firestore 실시간 리스너(onSnapshot), 트랜잭션, 권한 관리 등 고난도 비동기 개념 이해가 필요했던 상황
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label action">행동 (직접 실행한 노력)</span>
-              <p class="star-text">
-                단순 복사가 아닌 공식 문서를 정독하고 핵심 의문점을 구체화하여 질문한 뒤, 피드백 내용을 바탕으로 <strong>board-api.js, chat-api.js, follow-api.js 코어 모듈을 바닥부터 직접 설계</strong>
-              </p>
-            </div>
-            <div class="star-item">
-              <span class="star-label result">결과 (도출된 성과)</span>
-              <p class="star-text">
-                결함 없는 실시간 채팅 및 알림, 권한 기반 관리자 시스템을 구축했으며, 프로젝트 후반부에는 팀원들의 DB 쿼리 이슈를 역으로 해결해 줄 정도로 역량 신장
-              </p>
-            </div>
-          </div>
-          <div class="strength-footer">
-            <span class="footer-tag">공개 근거</span>
-            <a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer" class="footer-link">
-              혼밥비서 GitHub LOG.md (2026-06-12 게시판 코어, 06-22 실시간 채팅 엔진) ↗
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="section-header">
-        <div class="section-subtitle">보유 역량 & 기술 도구</div>
-        <h2 class="section-title">기술 스택 & 실무 역량</h2>
-        <p class="section-desc">프로젝트 실습과 개발 경험을 통해 솔직하게 검증한 기술 수준입니다.</p>
+        </div>
       </div>
 
-      <div class="skills-grid">
-        <!-- Java -->
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">☕</span>
-            <div class="skill-level mid">중급</div>
+      <!-- 완주 체크리스트 위젯 -->
+      <div class="checklist-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span class="badge-tag emerald" id="checklist-status-badge">완료 6/6</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-top: 6px;">과제 완주 체크리스트</h3>
           </div>
-          <h3 class="skill-title">Java</h3>
-          <p class="skill-text">
-            객체지향(OOP) 개념과 기본 구조에 익숙하며, 로직 설계 및 애플리케이션 백엔드 흐름 분석이 가능합니다.
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            항목을 클릭하여 완료 상태를 토글할 수 있으며, 변경 사항은 로컬 브라우저에 자동 보존됩니다.
           </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 65%;"></div>
-          </div>
         </div>
 
-        <!-- Database -->
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🗄️</span>
-            <div class="skill-level mid">중급</div>
+        <div class="checklist-items">
+          <div class="check-item completed" data-idx="0">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">1. 내 리추얼 기록을 직접 읽고 표시한 대목을 옮겨 적었습니다. (Cisco 실습, 몸살 출석, 알람 10개 등 6대 명장면)</div>
           </div>
-          <h3 class="skill-title">데이터베이스 (SQL / NoSQL)</h3>
-          <p class="skill-text">
-            RDBMS CRUD 쿼리 및 정규화와 더불어 Firestore 트랜잭션, 복합 쿼리, 실시간 데이터 모델링 경험을 보유하고 있습니다.
-          </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 65%;"></div>
+          <div class="check-item completed" data-idx="1">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">2. 에이전트 규칙 다섯 개를 나의 언어로 쓰고 우선순위를 정했습니다.</div>
           </div>
-        </div>
-
-        <!-- HTML / CSS / JS -->
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🎨</span>
-            <div class="skill-level mid">중급</div>
+          <div class="check-item completed" data-idx="2">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">3. 에이전트가 뽑은 강점 지도에서 아닌 것을 지우고 이유를 남겼습니다. (수동적 순응 / 완벽주의 제외 및 재정립)</div>
           </div>
-          <h3 class="skill-title">웹 프론트엔드 (HTML5 / CSS3 / JS)</h3>
-          <p class="skill-text">
-            시맨틱 마크업, 모바일 터치 이벤트 제어, 반응형 UI 및 커스텀 모달 컴포넌트를 주도적으로 구현할 수 있습니다.
-          </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 65%;"></div>
+          <div class="check-item completed" data-idx="3">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">4. 고난에서 시작해 더 나아진 나로 끝나는 이야기를 3인칭으로 받고 1인칭으로 고쳐 썼습니다.</div>
           </div>
-        </div>
-
-        <!-- Python -->
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🐍</span>
-            <div class="skill-level basic">기초</div>
+          <div class="check-item completed" data-idx="4">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">5. 동료 두 사람에게 읽히고 답을 이름 없이 적었습니다.</div>
           </div>
-          <h3 class="skill-title">Python</h3>
-          <p class="skill-text">
-            기본 문법을 익혀 자동화 스크립트 작성 및 텍스트/로그 데이터 파싱에 활용하고 있습니다.
-          </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 40%;"></div>
-          </div>
-        </div>
-
-        <!-- Network -->
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🌐</span>
-            <div class="skill-level basic">기초</div>
-          </div>
-          <h3 class="skill-title">네트워크 기초 (Network)</h3>
-          <p class="skill-text">
-            OSI 7계층, TCP/IP 모델, 패킷의 흐름과 포트 번호 등 관제에 필요한 네트워크 기본 개념을 학습 중입니다.
-          </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 42%;"></div>
-          </div>
-        </div>
-
-        <!-- Security Tools / Growth -->
-        <div class="skill-card highlight">
-          <div class="skill-top">
-            <span class="skill-icon">🛡️</span>
-            <div class="skill-level learning">집중 학습 중</div>
-          </div>
-          <h3 class="skill-title">보안관제 및 모니터링 실습</h3>
-          <p class="skill-text">
-            Wireshark 패킷 분석, 방화벽(Firewall) 및 IDS/IPS 기본 개념, 보안 이벤트 로그 분석을 중점 학습하고 있습니다.
-          </p>
-          <div class="progress-bar">
-            <div class="progress" style="width: 50%;"></div>
+          <div class="check-item completed" data-idx="5">
+            <div class="check-box-icon">✓</div>
+            <div class="check-text">6. 내 이름(주한태)이 들어간 자기소개서 초안과 포트폴리오 뼈대(1~8번 과제 매핑)를 만들었습니다.</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Evidence Project Section (공개 증거) -->
-    <section id="evidence" class="section">
-      <div class="section-header">
-        <div class="section-subtitle">프로젝트 개발 검증</div>
-        <h2 class="section-title">공개 프로젝트 및 개발 이력 (근거)</h2>
-        <p class="section-desc">실제 기여한 코드와 기능 구현 로그를 투명하게 공개합니다.</p>
-      </div>
-
-      <div class="project-evidence-box">
-        <div class="proj-header">
-          <div class="proj-meta">
-            <span class="proj-badge">팀 프로젝트</span>
-            <h3 class="proj-title">혼밥비서 (Honbabbiseo)</h3>
+      <!-- 주한태 자기소개서 초안 카드 -->
+      <div class="self-intro-box">
+        <div class="intro-title-area">
+          <div>
+            <span class="badge-tag">실전 자기소개서 초안</span>
+            <h3 style="margin-top: 6px;">알람 10개의 실행력과 배려의 소통으로 팀의 인프라를 완성하는 엔지니어, 주한태</h3>
           </div>
-          <a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer" class="github-btn">
-            GitHub 저장소 바로가기 ↗
-          </a>
-        </div>
-        <p class="proj-summary">
-          1인 가구를 위한 냉장고 식재료 관리, AI 영수증/식품영양성분 연동, 그리고 실시간 1:1 채팅 기반 수다방 커뮤니티 웹 서비스
-        </p>
-
-        <!-- 접근 가능한 핵심 상호작용: 상세 개발 일지 펼치기/접기 버튼 (T01-C19, T01-C20, T01-C21) -->
-        <div class="interactive-action-area">
-          <button type="button" id="toggle-log-btn" class="log-toggle-btn" aria-expanded="false" aria-controls="extended-log-panel">
-            <span class="btn-icon">🔍</span>
-            <span id="toggle-btn-text">주요 구현 상세 내역 펼치기</span>
-            <span class="chevron-icon">▼</span>
+          <button type="button" id="copy-intro-btn" class="copy-btn">
+            <span>📋</span> 자기소개서 복사
           </button>
         </div>
 
-        <div id="extended-log-panel" class="extended-log-panel" hidden>
-          <div class="panel-inner">
-            <h4 class="panel-title">🛡️ 주한태 담당 코어 모듈 & 보안/트랜잭션 설계 상세</h4>
-            <ul class="panel-list">
-              <li>
-                <strong>식약처 공공 API 파싱 (`nutrition-api.js`):</strong>
-                인증키를 클라이언트 코드에 노출하지 않도록 프록시 엔드포인트 설계 및 실시간 5대 영양소 추출 로직 구현
-              </li>
-              <li>
-                <strong>영수증 Vision AI 비동기 파이프라인 (`receipt-api.js`):</strong>
-                이미지 Base64 인코딩 후 멀티모달 API 호출 ➔ OCR 데이터 정제 ➔ 다중 식재료 배치 등록 트랜잭션 완성
-              </li>
-              <li>
-                <strong>Firestore 보안 규칙 & 1:1 채팅 리스너 (`chat-api.js`):</strong>
-                권한 없는 타 유저의 채팅방 접근 차단, <code>onSnapshot</code> 언마운트 시 메모리 누수 방지 구독 해제 처리
-              </li>
-              <li>
-                <strong>커스텀 모달 & 모바일 제스처 시스템:</strong>
-                브라우저 <code>alert</code> 취약점 제거 및 모바일 터치 이벤트 기반 스와이프 인터랙션 완성
-              </li>
-            </ul>
+        <div class="intro-content">
+          <div class="intro-section">
+            <h4>⚡ [위기를 30분의 여유로 바꾸는 실행의 회복탄력성]</h4>
+            <p>
+              엔지니어에게 가장 중요한 역량은 실수를 하지 않는 것이 아니라, 문제를 직시하고 즉각적인 시스템적 해결책을 만들어내는 실행력이라고 믿습니다. 저는 38일간 매일 아침과 저녁으로 스스로를 성찰하는 리추얼을 작성하며 학습 태도와 루틴을 관리해 왔습니다. 과정 중 연이은 지각과 피로라는 고비가 닥쳤을 때, 저는 단순한 자책에 머무르지 않고 '알람 10개 설정 및 수면 루틴 재정비'라는 구체적인 행동을 실행했습니다. 그 결과 바로 다음 날 정상 출석을 회복하고, 나아가 30분 일찍 도착해 동료들의 실습 환경을 먼저 점검하는 긍정적인 반전을 만들어냈습니다. 어떤 장애와 기술적 난관 앞에서도 주저앉지 않고 즉시 원인을 분석해 프로세스를 개선하는 회복탄력성을 약속드립니다.
+            </p>
+          </div>
+          <div class="intro-section">
+            <h4>🤝 [나눔으로 함께 견고해지는 협업과 기술 집념]</h4>
+            <p>
+              Cisco Packet Tracer를 활용한 라우터 OSPF 모의 실습, Linux 서버 호스팅, 정보처리 자격증 준비에 이르기까지 저는 혼자만의 성취에 머무르지 않았습니다. 모르는 부분은 솔직하게 묻고 체득한 뒤, 실습에서 어려움을 겪는 동료에게 다가가 구조를 설명하고 에러를 함께 해결했습니다. 동료들로부터 "첫 대면에서도 편안하게 만들어주는 배려심과 시원시원한 친화력"이라는 평가를 받은 저의 강점은, 팀 프로젝트에서 소통의 병목을 없애고 구성원 모두가 한 방향으로 나아가게 하는 윤활유가 되었습니다. 화를 다스리는 인내심과 유쾌한 친화력, 그리고 끝까지 파고드는 끈기로 귀사의 인프라를 안정적으로 지탱하는 엔지니어가 되겠습니다.
+            </p>
           </div>
         </div>
+      </div>
+
+      <!-- 3대 핵심 강점 카드 -->
+      <div class="section-header">
+        <div>
+          <h2>💪 되풀이된 3가지 핵심 강점</h2>
+          <p>38일간의 리추얼 분석 및 동료 피드백 교차 검증을 통해 엄선한 주한태의 고유 강점</p>
+        </div>
+      </div>
+
+      <div class="strength-grid">
+        <div class="glass-card strength-card">
+          <div class="strength-icon">🛡️</div>
+          <span class="strength-badge">Core Strength 01</span>
+          <h3>신뢰와 회복탄력성</h3>
+          <p class="strength-desc">
+            고비와 실패(지각/슬럼프)를 마주했을 때 자책에 머물지 않고, '알람 10개'와 같은 즉각적이고 시스템적인 환경 통제로 전환점을 만들어내는 탁월한 회복탄력성.
+          </p>
+          <div class="strength-quote">
+            "내일도 늦으면 사람이 아니다 ➔ 알람 10개 맞추고 남들보다 30분 일찍 도착 (10/14~10/16 리추얼)"
+          </div>
+        </div>
+
+        <div class="glass-card strength-card">
+          <div class="strength-icon">⚙️</div>
+          <span class="strength-badge">Core Strength 02</span>
+          <h3>기술 탐구와 완결성</h3>
+          <p class="strength-desc">
+            Cisco Packet Tracer, OSPF 라우팅, 리눅스 서버 등 어려운 네트워크 실습 앞에서 모르는 것은 숨김없이 질문해 체득하고 끝까지 구현해 내는 집념.
+          </p>
+          <div class="strength-quote">
+            "모의실습 중 놓친 부분을 질문해 끝까지 해결하고, 방어전 세팅을 동료와 함께 완성함 (8/14, 10/12 리추얼)"
+          </div>
+        </div>
+
+        <div class="glass-card strength-card">
+          <div class="strength-icon">💬</div>
+          <span class="strength-badge">Core Strength 03</span>
+          <h3>인내와 쿠션형 소통</h3>
+          <p class="strength-desc">
+            불필요한 감정 소모를 차단하고("화를 내면 나를 갉아먹는다"), 첫 대면에서도 편안한 분위기를 유도하며 동료들의 막힌 문제를 아낌없이 돕는 시너지.
+          </p>
+          <div class="strength-quote">
+            "첫 대면, 대화 나눴을 때 편안하게 만들어주는 배려심과 유쾌한 화이팅 에너지 (동료 평가 & 10/20 리추얼)"
+          </div>
+        </div>
+      </div>
+
+      <!-- 포트폴리오 뼈대: 1~8번 과제/산출물 매핑 갤러리 -->
+      <div class="section-header">
+        <div>
+          <h2>🏗️ 포트폴리오 뼈대 (과제 1~8 산출물 매핑)</h2>
+          <p>3대 강점 체계 아래 배치된 8개 핵심 과제 및 프로젝트 산출물 로드맵</p>
+        </div>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <span class="task-tag">과제 01</span>
+          <h4>Cisco Packet Tracer 라우팅</h4>
+          <p>서브넷 마스크 분할 설계 및 OSPF 라우터 모의 실습 구축을 통한 네트워크 기반 확립.</p>
+          <div class="task-match-badge">🎯 [강점 1] 신뢰와 회복탄력성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 02</span>
+          <h4>Linux 가상화 서버 배포</h4>
+          <p>VMware 기반 리눅스/윈도우 가상 호스팅 및 방화벽 포트 포워딩 연동 테스트 완료.</p>
+          <div class="task-match-badge">🎯 [강점 1] 신뢰와 회복탄력성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 03</span>
+          <h4>38일 리추얼 트래커 허브</h4>
+          <p>매일 아침/저녁 리추얼 데이터 파싱 및 자가 루틴 모니터링 인터랙티브 대시보드 구축.</p>
+          <div class="task-match-badge">🎯 [강점 1] 신뢰와 회복탄력성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 04</span>
+          <h4>혼밥비서 공공 API 파이프라인</h4>
+          <p>식약처 공공데이터 5대 영양소 연동 및 영수증 Vision AI 일괄 등록 모듈 직접 개발.</p>
+          <div class="task-match-badge">🎯 [강점 2] 기술 탐구와 완결성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 05</span>
+          <h4>정처기 기반 네트워크 보안 실습</h4>
+          <p>정보처리 자격 지식 기반 패킷 트래픽 분석 및 네트워크 보안 취약점 점검 실습.</p>
+          <div class="task-match-badge">🎯 [강점 2] 기술 탐구와 완결성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 06</span>
+          <h4>서버 상태 헬스체크 자동화</h4>
+          <p>쉘 스크립트를 활용한 주기적 데몬 생존 확인 및 CPU/메모리 알림 스크립트 작성.</p>
+          <div class="task-match-badge">🎯 [강점 2] 기술 탐구와 완결성 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 07</span>
+          <h4>팀 네트워크 아키텍처 방어전</h4>
+          <p>모의 침해 공격 시나리오에 대응한 라우팅 테이블 재구성 및 방화벽 룰셋 협업 방어.</p>
+          <div class="task-match-badge">🎯 [강점 3] 인내와 쿠션형 소통 매핑</div>
+        </div>
+        <div class="portfolio-item">
+          <span class="task-tag">과제 08</span>
+          <h4>동료 기술 가이드 위키 구축</h4>
+          <p>자격증 기출 풀이 및 실습 막힘 해결 가이드를 동료들과 공유한 협업 문서화 작업.</p>
+          <div class="task-match-badge">🎯 [강점 3] 인내와 쿠션형 소통 매핑</div>
+        </div>
+      </div>
+
+      <!-- 고난에서 성장으로의 이야기 (3인칭 vs 1인칭 스위처) -->
+      <div class="narrative-box">
+        <div class="narrative-header">
+          <div>
+            <span class="badge-tag">성장 서사</span>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-top: 6px;">고난에서 시작해 더 나아진 나로 끝나는 이야기</h3>
+          </div>
+          <div class="narrative-switch">
+            <button type="button" class="narrative-btn active" data-mode="third">3인칭 관찰자 시점</button>
+            <button type="button" class="narrative-btn" data-mode="first">1인칭 나의 언어</button>
+          </div>
+        </div>
+
+        <div id="narrative-third" class="narrative-content">
+          <p>
+            주한태는 매일 아침 거울 앞에서 자신을 시험대에 올리는 청년이었다. 기술 교육 과정 초반, 그는 Cisco 라우터 설정과 리눅스 서버라는 낯선 장벽 앞에서 멍을 때리거나 집중력을 잃고 졸기도 했다. 때로는 마음속에 치밀어 오르는 짜증과 조급함으로 인해 '호구가 되지 않으려면 화를 내야 하지 않을까' 하는 내면의 갈등을 겪기도 했다.
+          </p>
+          <p>
+            고비는 10월 중순에 찾아왔다. 몸살로 몸이 천근만근인 날도 있었고, 결국 이틀 연속 지각이라는 뼈아픈 실패를 맛보았다. 그는 일기에 "내일도 늦으면 내가 개다"라는 거친 자조를 남기며 무너지는 듯했다.
+          </p>
+          <p>
+            하지만 그는 주저앉지 않았다. 감정적인 후회 대신 스마트폰에 알람 10개를 빽빽하게 등록하는 기민한 실행을 택했다. 다음 날 그는 당당히 정시에 도착했고, 그다음 날은 남들보다 30분이나 먼저 교실 문을 열었다. 그리고 자신이 터득한 네트워크 지식과 정보처리기사 문제 풀이를 옆 동료에게 친절하게 설명해 주고 있었다. 38일의 리추얼을 지나며 그는 화를 억누르는 사람이 아니라, 자신의 루틴과 마음을 스스로 장악한 성숙한 엔지니어로 거듭나 있었다.
+          </p>
+        </div>
+
+        <div id="narrative-first" class="narrative-content" style="display: none;">
+          <p>
+            새로운 IT 기술과 네트워크를 처음 마주했을 때, 솔직히 막막함과 피로가 밀려왔습니다. 화면 앞에서 멍해지거나 집중력이 흐려질 때면 자책감이 들었고, 예상치 못한 상황에서 솟구치는 짜증을 다스리는 것도 큰 숙제였습니다. 처음에는 그저 '내가 참고 넘어가면 바보가 되는 것은 아닐까' 고민하기도 했습니다.
+          </p>
+          <p>
+            가장 큰 위기는 10월 중순이었습니다. 누적된 피로로 몸살을 앓았고, 결국 이틀 연속 지각이라는 스스로 용납할 수 없는 고비를 겪었습니다. 일기장에 "내일도 늦으면 사람이 아니다"라고 적을 만큼 제 자신에게 화가 났습니다.
+          </p>
+          <p>
+            그러나 저는 말뿐인 자책에 머물지 않았습니다. 당장 그날 밤 알람 10개를 연달아 맞춰 환경 자체를 바꿨습니다. 다음 날 정시 출석을 지켜냈고, 이틀 뒤에는 남들보다 30분 먼저 도착해 불을 켰습니다. 일찍 도착해 차분해진 마음으로 옆자리 동료의 모의 실습 세팅과 자격증 시험공부를 도왔습니다.
+          </p>
+          <p>
+            38일간의 리추얼을 통해 저는 깨달았습니다. 참는 것은 나약함이 아니라 나 자신을 갉아먹지 않는 가장 강한 지혜이며, 고난이 왔을 때 알람 10개를 맞추듯 즉시 행동을 바꾸는 회복탄력성이 저 주한태의 가장 확실한 무기라는 사실을 말입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 동료 두 사람의 무기명 피드백 -->
+      <div class="section-header">
+        <div>
+          <h2>👥 동료 두 사람의 이름 없는 답</h2>
+          <p>리추얼 기간 동안 곁에서 주한태를 지켜본 동료들이 남긴 진솔한 증언</p>
+        </div>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="colleague-info">
+            <div class="colleague-avatar">A</div>
+            <div>
+              <div class="colleague-name">동료 A</div>
+              <div class="colleague-role">스터디 페어 & 프로젝트 팀원</div>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "한태는 처음 만났을 때부터 어색함을 단숨에 없애주는 편안함과 유쾌한 에너지를 지닌 친구입니다. 실습하다가 막히는 부분이 생겨 물어보면, 자기도 바쁠 텐데 귀찮아하는 기색 하나 없이 웃으면서 끝까지 함께 고민해 줍니다. 분위기를 밝게 띄우면서도 맡은 실습 과제는 끝까지 진지하게 완수하는 모습을 보며 배울 점이 많은 든든한 동료라고 느꼈습니다."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="colleague-info">
+            <div class="colleague-avatar" style="background: var(--gradient-brand);">B</div>
+            <div>
+              <div class="colleague-name">동료 B</div>
+              <div class="colleague-role">실습 파트너 & 자격증 스터디원</div>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "옆에서 지켜보면서 가장 인상 깊었던 건 끈기와 정직함입니다. 어려운 네트워크 개념이나 서버 세팅이 나왔을 때 아는 척 넘기지 않고 솔직하게 질문하며 배우고, 한번 잡은 문제는 끝까지 파고듭니다. 특히 컨디션이 안 좋거나 힘든 순간에도 즉시 루틴을 다잡고 남들보다 먼저 나와 준비하는 실행력은 팀 전체에 좋은 자극제가 됩니다."
+          </p>
+        </div>
+      </div>
+
+      <!-- AI와 나의 판단 세 줄 -->
+      <div class="judgment-box">
+        <span class="badge-tag">통합 종합 평가</span>
+        <h3 style="font-size: 1.35rem; font-weight: 700; margin-top: 6px;">AI와 나의 판단 세 줄</h3>
         
-        <div class="log-highlights">
-          <div class="log-item">
-            <span class="log-date">2026-05-27</span>
-            <div class="log-desc">
-              <strong>식약처 영양성분 API & 점수 알고리즘 연동:</strong>
-              <code>nutrition-api.js</code> 구현 및 영양소 가/감점 기반 냉장고 점수 계산 엔진 제작
+        <div class="judgment-list">
+          <div class="judgment-line">
+            <div class="judgment-role">🤖 AI의 판단</div>
+            <div class="judgment-msg">
+              "38일간의 리추얼은 주한태 님이 감정의 파도를 다스리고, 구체적인 행동(알람 10개)으로 루틴을 통제하며, 기술과 배려를 겸비한 협업형 인재로 성장했음을 정량적·정성적으로 입증하고 있습니다."
             </div>
           </div>
-          <div class="log-item">
-            <span class="log-date">2026-05-29</span>
-            <div class="log-desc">
-              <strong>Vision AI 영수증 인식 & 모바일 터치 제스처:</strong>
-              <code>receipt-api.js</code> 배치 등록 및 모바일 스와이프 드래그 핸들 UI 구현
+          <div class="judgment-line">
+            <div class="judgment-role">🧑 나의 판단</div>
+            <div class="judgment-msg">
+              "기록을 되돌아보며 내가 흔들렸던 순간조차 성장의 밑거름이었음을 확인했고, 이제 나 자신에 대한 확신과 책임감을 바탕으로 어떤 기술적 난제도 팀과 함께 돌파할 준비가 되었습니다."
             </div>
           </div>
-          <div class="log-item">
-            <span class="log-date">2026-06-12</span>
-            <div class="log-desc">
-              <strong>커뮤니티 수다방 게시판 풀스택:</strong>
-              <code>board-api.js</code> Firestore 트랜잭션, 페이지네이션, 좋아요/신고/관리자 기능 전면 구축
-            </div>
-          </div>
-          <div class="log-item">
-            <span class="log-date">2026-06-22</span>
-            <div class="log-desc">
-              <strong>1:1 실시간 채팅 & 팔로우 시스템:</strong>
-              <code>chat-api.js</code>, <code>follow-api.js</code> 실시간 onSnapshot 구독 기반 메시징 완결
+          <div class="judgment-line">
+            <div class="judgment-role">✨ 우리의 결론</div>
+            <div class="judgment-msg">
+              "이 기록은 단순한 과거의 메모가 아니라, 주한태라는 엔지니어가 현업에서 보여줄 신뢰와 실행력의 확실한 첫 번째 보증서입니다."
             </div>
           </div>
         </div>
       </div>
+
     </section>
 
-    <!-- Contact & Footer -->
-    <section id="contact" class="section contact-section">
-      <div class="contact-card">
-        <div class="section-subtitle">연락 및 협업 문의</div>
-        <h2 class="section-title">연락처 & 소통 채널</h2>
-        <p class="contact-sub">보안관제 포지션 및 프로젝트 협업 제안은 언제든 환영합니다.</p>
 
-        <div class="contact-grid">
-          <div class="contact-item">
-            <span class="c-label">이메일</span>
-            <span class="c-value"><a href="mailto:gksxogksxo1001@gmail.com">gksxogksxo1001@gmail.com</a></span>
+    <!-- ========================================== -->
+    <!-- TAB 2: 강점 지도 & 에이전트 행동 규칙 -->
+    <!-- ========================================== -->
+    <section id="tab-strengths" class="tab-content">
+      
+      <div class="section-header">
+        <div>
+          <h2>📋 나만의 에이전트 행동 규칙 5개</h2>
+          <p>38일간의 성찰을 통해 우선순위별로 정립한 주한태의 5대 행동 강령</p>
+        </div>
+      </div>
+
+      <div class="agent-rules-grid">
+        <div class="rule-card">
+          <div class="rule-priority">01</div>
+          <div class="rule-body">
+            <h4>화를 내는 것은 나를 갉아먹는 일이다. 감정은 차분하게 가라앉히고 미소와 논리로 대한다.</h4>
+            <p>불필요한 감정 소모를 차단하고 상황을 냉정하게 관찰하여 어른스럽고 유쾌하게 상황을 주도합니다. (10/20 기록 기반)</p>
           </div>
-          <div class="contact-item">
-            <span class="c-label">GitHub 저장소</span>
-            <span class="c-value"><a href="https://github.com/gksxogksxo1001-sketch/Honbabbiseo" target="_blank" rel="noreferrer">github.com/gksxogksxo1001-sketch</a></span>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">02</div>
+          <div class="rule-body">
+            <h4>모르는 것은 부끄러워하지 말고 즉시 묻고, 알게 된 것은 동료에게 아낌없이 나눈다.</h4>
+            <p>배움의 과정에서 자존심을 세우지 않습니다. 질문을 두려워하지 않고 함께 스터디하며 동반 성장의 시너지를 냅니다.</p>
           </div>
-          <div class="contact-item">
-            <span class="c-label">활동 지역</span>
-            <span class="c-value">대전광역시 유성구</span>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">03</div>
+          <div class="rule-body">
+            <h4>실패나 나태함이 왔을 땐 자책에 머물지 말고, 알람 10개를 맞추듯 구체적이고 즉각적인 물리적 행동을 실행한다.</h4>
+            <p>말로만 하는 반성이 아닌, 환경을 통제하고 행동 루틴을 즉시 수정하여 현실의 결과를 바꿉니다.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">04</div>
+          <div class="rule-body">
+            <h4>내가 맡은 바는 끝까지 물고 늘어져 완결짓고, 남에게 민폐를 끼치지 않는 신뢰를 만든다.</h4>
+            <p>기술 실습이든 프로젝트든 끝까지 파고들어 내 손으로 작동을 확인하는 책임감을 유지합니다.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">05</div>
+          <div class="rule-body">
+            <h4>사람을 대할 땐 편안한 분위기를 만들고 차별 없이 상대방의 입장을 먼저 경청한다.</h4>
+            <p>상대방의 실수나 모자람을 탓하기보다 배려하고 품어주어 언제든 같이 일하고 싶은 동료가 됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 강점 채택 vs 제외 평가 매트릭스 -->
+      <div class="section-header">
+        <div>
+          <h2>🗺️ 강점 지도 평가 매트릭스 (채택 vs 지운 강점)</h2>
+          <p>에이전트가 도출한 강점 중 실제 주한태의 고유성과 부합하지 않아 지운 강점과 명확한 이유</p>
+        </div>
+      </div>
+
+      <div class="matrix-grid">
+        <div class="matrix-col approved">
+          <h3><span>✅</span> 채택된 핵심 강점 (3개)</h3>
+          <div class="matrix-item">
+            <h5>인내와 배려의 쿠션형 소통</h5>
+            <p>짜증 나거나 당황스러운 상황에서도 평정심을 유지하며, 동료의 학습 어려움을 친절하게 해소해 주는 배려심.</p>
+          </div>
+          <div class="matrix-item">
+            <h5>기술적 몰입과 끈기 있는 실행력</h5>
+            <p>Cisco 라우터, OSPF, Linux 서버, 정보처리 등 어려운 엔지니어링 개념을 끝까지 파고들어 내 것으로 만드는 집념.</p>
+          </div>
+          <div class="matrix-item">
+            <h5>유쾌한 친화력과 팀 분위기 메이커</h5>
+            <p>첫 대면의 벽을 허무는 자연스러운 친화력과 팀 전체에 활력을 불어넣는 긍정 에너지.</p>
           </div>
         </div>
 
-        <p class="privacy-note">
-          * 개인정보 보호를 위해 민감 정보(주민번호, 휴대전화 번호 등)는 웹에 공개하지 않습니다.
-        </p>
+        <div class="matrix-col removed">
+          <h3><span>❌</span> 지운 강점 및 그 이유</h3>
+          <div class="matrix-item">
+            <h5>[지운 강점] 수동적 순응 / 무조건적인 착한 사람</h5>
+            <p>
+              <strong>지운 이유:</strong> 8월 기록 당시 '호구가 되지 않으려 화를 내야 하나' 고민했으나, 10/20 기록에서 "화를 내면 나 자신을 갉아먹는다"는 것을 깨달았습니다. 이는 수동적 착함이 아니라 <strong>'나를 지키기 위해 의식적으로 선택한 능동적 자기 통제'</strong>이므로 수동적 순응 키워드를 삭제함.
+            </p>
+          </div>
+          <div class="matrix-item">
+            <h5>[지운 강점] 타고난 완벽주의</h5>
+            <p>
+              <strong>지운 이유:</strong> 완벽함에 집착하다 졸거나 지각했던 고비가 있었습니다. 중요한 것은 결함 없는 완벽함이 아니라, <strong>'실수를 직시하고 알람 10개를 맞춰 30분 일찍 도착하는 즉각적 회복 탄력성'</strong>이 진짜 강점이기 때문에 제외함.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <!-- 명장면 전환점 타임라인 -->
+      <div class="section-header">
+        <div>
+          <h2>⏱️ 38일간의 명장면 전환점 타임라인</h2>
+          <p>날짜가 있는 실제 리추얼 기록 대목 하이라이트</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-08-11 (여정의 시작)</div>
+          <div class="timeline-card">
+            <h4>첫날의 다짐과 동료들의 시선</h4>
+            <blockquote>"짜증나는 일이 있었는데 어른답게 참고 웃으면서 대응함. 짜증이 나도 한 번만 참고 인내하면 좋은 결과를 주는 것 같다."</blockquote>
+            <p>동료 피드백: "첫 대면에서 편안하게 만들어주는 배려심", "성격이 시원시원하다."</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-08-14 (협업의 가치 체득)</div>
+          <div class="timeline-card">
+            <h4>Cisco 라우터 모의 실습과 질문하는 용기</h4>
+            <blockquote>"Cisco Packet Tracer를 활용해서 라우터 모의 실습을 진행했는데 멍 때리다가 놓친 부분을 옆자리 형한테 물어봐서 원활하게 진행함."</blockquote>
+            <p>결과: 모르는 것을 감추지 않고 솔직하게 묻고 배우는 태도가 동료와의 강력한 시너지를 만듦.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-09-11 (외부 시각의 흡수)</div>
+          <div class="timeline-card">
+            <h4>현업 실무자의 조언과 배움의 동기부여</h4>
+            <blockquote>"SKT 실무자분의 조언을 들어서 열심히 흡수하려고 노력했다. 내가 이해하고 알려주면 된다."</blockquote>
+            <p>결과: 외부 전문가의 조언을 적극 흡수하고 나아가 동료에게 나누겠다는 프로페셔널한 마인드 확립.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-10-07 (고난과 책임감)</div>
+          <div class="timeline-card">
+            <h4>몸살 고비 속에서도 지켜낸 출석</h4>
+            <blockquote>"공부하러 나왔는데 아파서 집중도 못했지만 조금이라도 들으러 온 거 고생했다."</blockquote>
+            <p>결과: 컨디션 난조 앞에서도 핑계를 대지 않고 자리를 지킨 끈기와 성실함 증명.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-10-14 ~ 10-16 (결정적 전환점)</div>
+          <div class="timeline-card">
+            <h4>연이은 지각 ➔ '알람 10개' ➔ 30분 조기 도착</h4>
+            <blockquote>"2일 연속 지각이라니, 내일도 늦으면 개다 ➔ 어제 알람 10개를 맞춰놓고 잠 ➔ 오늘은 남들보다 30분을 일찍 학원에 도착함."</blockquote>
+            <p>결과: 뼈아픈 실수를 구체적인 물리적 행동으로 즉각 반전시키고 동료의 시험공부까지 지원한 진짜 성장 모먼트.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026-10-20 (성숙의 완성)</div>
+          <div class="timeline-card">
+            <h4>감정 통제의 완성: "화를 내면 나 자신을 갉아먹는다"</h4>
+            <blockquote>"예전이었다면 화를 낼 만한 상황에서 화를 안 내고 그냥 넘어감. 화를 내면 내 자신을 갉아먹는 행위니까 좋은 행동이다."</blockquote>
+            <p>결과: 38일간의 리추얼을 통해 내면의 감정을 다스리는 어른스러운 주도권을 완전히 확보.</p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <footer class="footer">
-      <p>© 2026 주한태 (Ju Han-tae). All rights reserved.</p>
-      <p class="footer-sub">Designed with Minimal & Clean Security Aesthetics</p>
-    </footer>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: 데일리 리추얼 트래커 (기록 & 실시간 작성) -->
+    <!-- ========================================== -->
+    <section id="tab-tracker" class="tab-content">
+      
+      <!-- 상단 메트릭 요약 -->
+      <div class="hero-stats-row" style="margin-top: 0; margin-bottom: 32px; border-top: none; padding-top: 0;">
+        <div class="hero-stat-card">
+          <div class="stat-label">📚 총 기록 누적</div>
+          <div class="stat-value" id="stat-total-days">38<small>일</small></div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-label">🫁 누적 호흡 시간</div>
+          <div class="stat-value" id="stat-total-breath">136<small>분</small></div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-label">🎯 저녁 실천 성공률</div>
+          <div class="stat-value" id="stat-practice-rate">88<small>%</small></div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-label">🔥 최근 연속 스트릭</div>
+          <div class="stat-value">38<small>일 완료</small></div>
+        </div>
+      </div>
+
+      <!-- 실시간 호흡 명상 위젯 -->
+      <div class="breathing-box">
+        <div class="breathing-info">
+          <span class="badge-tag">아침 리추얼 가이드</span>
+          <h3 style="margin-top: 6px;">마음을 가라앉히는 호흡 명상</h3>
+          <p>
+            아침 리추얼 기록 전, 3~5분간 호흡에 집중하며 차분한 마음 상태를 만듭니다. 원의 크기 변화에 맞춰 숨을 들이쉬고 내쉬어 보세요.
+          </p>
+          <div class="timer-controls">
+            <button type="button" class="btn-pill timer-preset-btn" data-min="1">1분</button>
+            <button type="button" class="btn-pill timer-preset-btn active" data-min="3">3분</button>
+            <button type="button" class="btn-pill timer-preset-btn" data-min="5">5분</button>
+            <button type="button" id="start-breath-btn" class="btn-pill primary">호흡 시작</button>
+          </div>
+        </div>
+
+        <div class="breathing-visual-wrap">
+          <div id="breath-circle" class="breath-circle">
+            <div id="breath-state-text" class="breath-state-text">준비</div>
+          </div>
+          <div id="timer-display" class="breath-timer-display">03:00</div>
+        </div>
+      </div>
+
+      <!-- 기록 탐색 및 새 기록 등록 탑바 -->
+      <div class="tracker-topbar">
+        <div class="filter-group">
+          <input type="text" id="search-input" class="search-input" placeholder="날짜, 강점, 일화 키워드 검색...">
+          <button type="button" class="filter-btn active" data-filter="all">전체 기록</button>
+          <button type="button" class="filter-btn" data-filter="highlight">★ 명장면만</button>
+          <button type="button" class="filter-btn" data-filter="evening-only">저녁 마무리 포함</button>
+        </div>
+
+        <button type="button" id="open-new-entry-btn" class="btn-pill primary">
+          <span>✍️</span> 오늘 리추얼 새로 쓰기
+        </button>
+      </div>
+
+      <!-- 기록 카드 피드 -->
+      <div id="records-container" class="records-feed">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODAL: 기록 상세 모달 -->
+  <!-- ========================================== -->
+  <div id="record-modal" class="modal-overlay">
+    <div class="modal-window">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" title="닫기">&times;</button>
+      <div id="modal-record-detail"></div>
+    </div>
   </div>
 
-  <!-- 카드 5 상호작용 및 움직임 제어 스크립트 -->
-  <script>
-    // 1. 상세 구현 내역 펼치기/접기 (마우스 Click + 키보드 Enter/Space 완벽 지원)
-    const toggleBtn = document.getElementById('toggle-log-btn');
-    const logPanel = document.getElementById('extended-log-panel');
-    const toggleBtnText = document.getElementById('toggle-btn-text');
+  <!-- ========================================== -->
+  <!-- MODAL: 새 리추얼 작성 모달 -->
+  <!-- ========================================== -->
+  <div id="new-entry-modal" class="modal-overlay">
+    <div class="modal-window">
+      <button type="button" id="close-new-entry-btn" class="modal-close-btn" title="닫기">&times;</button>
+      <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;">✍️ 새로운 리추얼 기록</h3>
 
-    if (toggleBtn && logPanel) {
-      toggleBtn.addEventListener('click', function() {
-        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        if (isExpanded) {
-          logPanel.hidden = true;
-          toggleBtn.setAttribute('aria-expanded', 'false');
-          toggleBtnText.textContent = '주요 구현 상세 내역 펼치기';
-          toggleBtn.classList.remove('active');
-        } else {
-          logPanel.hidden = false;
-          toggleBtn.setAttribute('aria-expanded', 'true');
-          toggleBtnText.textContent = '상세 내역 접기';
-          toggleBtn.classList.add('active');
-        }
-      });
-    }
+      <div class="form-group">
+        <label for="form-date">날짜</label>
+        <input type="date" id="form-date">
+      </div>
 
-    // 2. 모션 줄이기/끄기 토글 (사용자 애니메이션 선택권 - T01-C22)
-    const motionToggleBtn = document.getElementById('motion-toggle-btn');
-    const motionBtnText = document.getElementById('motion-btn-text');
+      <div style="margin: 20px 0 10px; font-weight: 700; color: var(--primary-light);">☀️ [아침 리추얼]</div>
+      <div class="form-group">
+        <label for="form-breath">호흡 시간</label>
+        <input type="text" id="form-breath" placeholder="예: 3.5분">
+      </div>
+      <div class="form-group">
+        <label for="form-calm">편안했던 / 담담한 장면</label>
+        <input type="text" id="form-calm" placeholder="나를 편안하게 했던 상상이나 장면">
+      </div>
+      <div class="form-group">
+        <label for="form-strength">오늘의 내 강점</label>
+        <input type="text" id="form-strength" placeholder="오늘 발휘할 나의 강점 한 줄">
+      </div>
+      <div class="form-group">
+        <label for="form-episode">강점이 드러난 일화</label>
+        <textarea id="form-episode" placeholder="강점이 드러났던 구체적인 행동이나 상황"></textarea>
+      </div>
 
-    if (motionToggleBtn) {
-      motionToggleBtn.addEventListener('click', function() {
-        const isReduced = document.body.classList.toggle('reduce-motion');
-        motionToggleBtn.setAttribute('aria-pressed', isReduced ? 'true' : 'false');
-        if (isReduced) {
-          motionBtnText.textContent = '모션 켜기';
-          motionToggleBtn.style.background = 'rgba(56, 189, 248, 0.2)';
-        } else {
-          motionBtnText.textContent = '모션 끄기';
-          motionToggleBtn.style.background = '';
-        }
-      });
-    }
+      <div style="margin: 20px 0 10px; font-weight: 700; color: var(--accent-purple);">🌙 [저녁 마무리]</div>
+      <div class="form-group">
+        <label for="form-evening-done">강점 행동 실천 여부</label>
+        <select id="form-evening-done">
+          <option value="실천했다">실천했다</option>
+          <option value="일부 실천했다">일부 실천했다</option>
+          <option value="못 했다">못 했다</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="form-note">나에게 남기는 말</label>
+        <input type="text" id="form-note" placeholder="오늘 하루 고생한 나에게 전하는 한마디">
+      </div>
+      <div class="form-group">
+        <label for="form-gratitude">감사일기</label>
+        <textarea id="form-gratitude" placeholder="동료나 나 자신에게 느낀 감사의 순간"></textarea>
+      </div>
 
-    // 3. 키보드 Tab 이동 시 활성화된 요소로 화면 자동 부드럽게 스크롤 이동
-    document.addEventListener('keyup', function(e) {
-      if (e.key === 'Tab') {
-        const active = document.activeElement;
-        if (active && active !== document.body && active !== document.documentElement) {
-          active.scrollIntoView({
-            behavior: document.body.classList.contains('reduce-motion') ? 'auto' : 'smooth',
-            block: 'center',
-            inline: 'nearest'
-          });
-        }
-      }
-    });
-  </script>
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+        <button type="button" id="save-entry-btn" class="btn-pill primary" style="width: 100%; justify-content: center; padding: 12px;">
+          리추얼 기록 저장하기
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Footer -->
+  <footer class="app-footer">
+    <div class="container">
+      <p>© 2026 주한태 (Ju Han-tae). 38일간의 리추얼 여정 & 포트폴리오 산출물</p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: var(--text-dim);">
+        Designed for Growth, Resilience & Engineering Excellence
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/ritual-data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
