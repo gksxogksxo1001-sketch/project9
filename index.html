@@ -105,11 +105,11 @@
         <div class="checklist-items">
           <div class="check-item completed" data-idx="0">
             <div class="check-box-icon">✓</div>
-            <div class="check-text">1. 내 리추얼 기록을 직접 읽고 표시한 대목을 옮겨 적었습니다. (Cisco 실습, 몸살 출석, 알람 10개 등 6대 명장면)</div>
+            <div class="check-text">1. 내 리추얼 기록을 직접 읽고 표시한 대목을 날짜와 함께 서사 문서 맨 앞에 옮겨 적었습니다. (Cisco 실습, 몸살 출석, 알람 10개 등 7개 대목 · 원문 그대로)</div>
           </div>
           <div class="check-item completed" data-idx="1">
             <div class="check-box-icon">✓</div>
-            <div class="check-text">2. 에이전트 규칙 다섯 개를 나의 언어로 쓰고 우선순위를 정했습니다.</div>
+            <div class="check-text">2. 에이전트 규칙 다섯 개를 나의 언어로 쓰고 우선순위를 정했습니다. (부딪힐 땐 ④ 기록 없으면 비우기 우선)</div>
           </div>
           <div class="check-item completed" data-idx="2">
             <div class="check-box-icon">✓</div>
@@ -371,8 +371,57 @@
       
       <div class="section-header">
         <div>
-          <h2>📋 나만의 에이전트 행동 규칙 5개</h2>
-          <p>38일간의 성찰을 통해 우선순위별로 정립한 주한태의 5대 행동 강령</p>
+          <h2>🤖 에이전트에게 주는 다섯 가지 규칙</h2>
+          <p>무료 AI 새 대화에 규칙 한 벌 + 내 기록 파일을 넣어 "나만의 에이전트"로 씁니다. (나의 언어로 작성)</p>
+        </div>
+      </div>
+
+      <div class="agent-rules-grid" id="agent-rules-grid">
+        <div class="rule-card">
+          <div class="rule-priority">①</div>
+          <div class="rule-body">
+            <h4>"착하다·성실하다" 같은 말로 나를 꾸미지 마. 대신 날짜가 붙은 장면 하나를 가져와.</h4>
+            <p>"책임감 있다" ❌ → "10-14 밤 알람을 10개 맞추고 잤다" ⭕</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">②</div>
+          <div class="rule-body">
+            <h4>한 번 나온 건 '후보'로만 적어. 여러 날 되풀이된 것만 강점 자리에 올려.</h4>
+            <p>몇 번, 어느 날짜에 나왔는지 같이 적습니다. (예: "화를 안 냄" 08-11 · 08-26 · 09-08 · 09-28 · 10-20)</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">③</div>
+          <div class="rule-body">
+            <h4>내가 본 나와 동료가 본 나를 한 줄에 나란히 놓아.</h4>
+            <p>나는 "강점이 없다"고 자주 썼고, 동료는 "편안하게 해 준다"고 했습니다. 다르면 다르다고 그대로 씁니다.</p>
+          </div>
+        </div>
+        <div class="rule-card rule-card-key">
+          <div class="rule-priority">④</div>
+          <div class="rule-body">
+            <h4>기록이 없으면 비워 둬. 서사가 이어지게 하려고 없는 장면·사건·감정을 지어내서 채우지 마.</h4>
+            <p>빈 칸, 기록 없는 날, "(이름 가림)" 칸은 "기록 없음"으로 적고 넘어갑니다. 상상이든 스토리 연결이든 마찬가지.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-priority">⑤</div>
+          <div class="rule-body">
+            <h4>먼저 3인칭으로 써. 첫 문장은 "한태 님은"으로 시작해.</h4>
+            <p>1인칭은 카드 4에서 제가 직접 바꿉니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="rule-conflict-note" id="rule-conflict-note">
+        <strong>규칙끼리 부딪힐 때:</strong> ④ 기록 없으면 비우기 &gt; ① 장면 &gt; ② 반복 &gt; ③ 나란히 &gt; ⑤ 3인칭 — 없는 것을 지어내지 않는 것이 먼저입니다.
+      </p>
+
+      <div class="section-header">
+        <div>
+          <h2>📋 나의 행동 원칙 5개</h2>
+          <p>38일간의 성찰에서 길어 올린 생활 다짐 (에이전트 규칙과 별개)</p>
         </div>
       </div>
 
@@ -480,8 +529,8 @@
           <div class="timeline-date">2026-08-14 (협업의 가치 체득)</div>
           <div class="timeline-card">
             <h4>Cisco 라우터 모의 실습과 질문하는 용기</h4>
-            <blockquote>"Cisco Packet Tracer를 활용해서 라우터 모의 실습을 진행했는데 멍 때리다가 놓친 부분을 옆자리 형한테 물어봐서 원활하게 진행함."</blockquote>
-            <p>결과: 모르는 것을 감추지 않고 솔직하게 묻고 배우는 태도가 동료와의 강력한 시너지를 만듦.</p>
+            <blockquote>"Cisco Packet Tracer를 활용해서 라우터에 대해 모의 실습을 진행했는데 멍 때리다가 놓친 부분이 있었는데 옆자리 형 한테 물어봐서 원활한 모의 실습을 진행함."</blockquote>
+            <p>내 표시: "놓친 부분을 물어봄"이 08-12 · 08-13 · 08-24 · 09-01에도 되풀이됨.</p>
           </div>
         </div>
 
@@ -490,7 +539,7 @@
           <div class="timeline-date">2026-09-11 (외부 시각의 흡수)</div>
           <div class="timeline-card">
             <h4>현업 실무자의 조언과 배움의 동기부여</h4>
-            <blockquote>"SKT 실무자분의 조언을 들어서 열심히 흡수하려고 노력했다. 내가 이해하고 알려주면 된다."</blockquote>
+            <blockquote>"내가 참지 못하는 멍청함이여도 내가 이해하고 알려주면 된다." / "사실 오늘은 SKT실무자분의 조언? 이런 느낌을 들어서 열심히 흡수 하려고 노력했다."</blockquote>
             <p>결과: 외부 전문가의 조언을 적극 흡수하고 나아가 동료에게 나누겠다는 프로페셔널한 마인드 확립.</p>
           </div>
         </div>

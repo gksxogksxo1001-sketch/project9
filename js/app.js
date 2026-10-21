@@ -462,4 +462,162 @@ Cisco Packet Tracer를 활용한 라우터 OSPF 모의 실습, Linux 서버 호�
   // Initial Render
   renderMetrics();
   renderRecords();
+
+  // ==========================================
+  // Card 3: Guide Modal Controller (T09-C06 ~ T09-C10)
+  // ==========================================
+  const guideModalOverlay = document.getElementById('guide-modal-overlay');
+  const btnOpenGuideModal = document.getElementById('btn-open-guide-modal');
+  const guideModalCloseBtn = document.getElementById('guide-modal-close-btn');
+  const guideBtnPrev = document.getElementById('guide-btn-prev');
+  const guideBtnNext = document.getElementById('guide-btn-next');
+  const guideStepIndicator = document.getElementById('guide-step-indicator');
+  const guideModalTitle = document.getElementById('guide-modal-title');
+  const guideModalBody = document.querySelector('.guide-modal-body');
+
+  const guideSteps = [
+    {
+      step: '2단계 확인 중',
+      title: '에이전트에게 주는 다섯 가지 규칙',
+      content: `
+        <div class="guide-section">
+          <h4>하는 일</h4>
+          <p>내 리추얼 기록을 바탕으로 에이전트에게 역할을 부여하고, 거짓이나 과장을 걸러낼 수 있는 나만의 규칙 5개를 작성합니다.</p>
+          <p><strong>우선순위 원칙</strong> ④ 기록 없으면 비우기 > ① 장면 > ② 반복 > ③ 나란히 > ⑤ 3인칭 순서로 엄격히 통제합니다.</p>
+        </div>
+        <div class="guide-section border-emerald">
+          <h4>통과 기준</h4>
+          <ul>
+            <li><strong>T09-C03</strong> 규칙이 다섯 개이다.</li>
+            <li><strong>T09-C04</strong> 학생 자신의 표현으로 작성되어 있다.</li>
+            <li><strong>T09-C05</strong> 규칙끼리 부딪힐 때의 우선순위가 정해져 있다.</li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      step: '3단계 확인 중',
+      title: '강점 지도 뽑고, 틀린 것 지우기',
+      content: `
+        <div class="guide-section">
+          <h4>하는 일</h4>
+          <p>
+            에이전트에게 상위 강점 세 개를 고르게 하고, 강점마다 네 가지를 붙이게 합니다. 날짜가 있는 장면, 동료가 말한 것, 그때 내가 지킨 가치, 그리고 1번부터 8번 과제까지 만든 것 중 그 강점이 드러난 것. 그다음이 진짜 작업입니다. 표를 읽고 아닌 것을 지우십시오. 기록에 없는 장면, 나 같지 않은 표현, 남이 말한 것을 부풀린 것. 지운 자리에 왜 지웠는지 한 줄을 남깁니다. 카드 1에서 표시한 대목과 견주어 보면 판단이 쉽습니다. 하나도 지우지 않았다면 두 가지 중 하나입니다. 에이전트가 완벽했거나, 내가 안 읽었거나. 대개 뒤쪽입니다.
+          </p>
+          <p style="margin-bottom: 0;">
+            <strong>완료 목표</strong> 에이전트가 고른 강점 셋을 내가 검사합니다. 지우는 것이 이 카드의 일입니다.
+          </p>
+        </div>
+
+        <div class="guide-section">
+          <h4>첫 행동</h4>
+          <ul>
+            <li>"상위 강점 셋을 고르고, 강점마다 날짜 있는 장면·동료가 말한 것·지킨 가치·1~8번 과제 중 관련된 것을 붙여 표로" 요청합니다.</li>
+            <li>표를 서사 문서에 옮깁니다.</li>
+            <li>아닌 항목을 지우고 이유를 적습니다.</li>
+            <li>지운 뒤 빈 칸이 생기면 기록에서 직접 찾아 채우거나 "기록에 없음"으로 둡니다.</li>
+          </ul>
+        </div>
+
+        <div class="guide-section border-emerald">
+          <h4>통과 기준</h4>
+          <ul>
+            <li><strong>T09-C06</strong> 강점이 세 개 이상이다.</li>
+            <li><strong>T09-C07</strong> 강점 각각에 날짜가 적힌 장면이 하나 이상 있다.</li>
+            <li><strong>T09-C08</strong> 강점 각각에 동료가 말한 것이 있거나 "자신의 느낌"이 적혀 있다.</li>
+            <li><strong>T09-C09</strong> 강점 각각에 1번부터 8번 과제 중 관련된 것이 하나 이상 적혀 있다.</li>
+            <li><strong>T09-C10</strong> 에이전트 제안 가운데 학생이 지운 항목이 하나 이상 있고, 지운 이유가 각각 적혀 있다.</li>
+          </ul>
+        </div>
+
+        <div class="guide-section border-amber">
+          <h4>막히는 지점과 확인 순서</h4>
+          <div class="guide-sub-heading">세 개가 다 비슷합니다</div>
+          <p>"셋이 서로 어떻게 다른지 각각 다른 장면으로 설명해 달라"고 합니다. 설명이 안 되면 둘을 합치고 다른 후보를 올립니다.</p>
+          <div class="guide-sub-heading">동료가 말한 것이 없습니다</div>
+          <p>동료 나눔을 건너뛴 날이 많은 경우입니다. 그 자리에 자신의 느낌을 적습니다.</p>
+        </div>
+
+        <div class="guide-section border-purple">
+          <h4>남길 것</h4>
+          <ul>
+            <li>강점 지도 표</li>
+            <li>지운 항목과 이유</li>
+          </ul>
+        </div>
+      `
+    },
+    {
+      step: '4단계 확인 중',
+      title: '고난에서 회복으로 이어지는 서사 완성',
+      content: `
+        <div class="guide-section">
+          <h4>하는 일</h4>
+          <p>고난(과정 이전 연도·장소)에서 출발하여 방황을 극복하고, 리추얼 속에서 물리적 행동으로 회복하여 더 나아진 나로 끝나는 이야기를 완성합니다.</p>
+          <p>에이전트로부터 3인칭 초안을 받고, 내가 1인칭으로 직접 고쳐 써 두 판을 나란히 남깁니다.</p>
+        </div>
+        <div class="guide-section border-emerald">
+          <h4>통과 기준</h4>
+          <ul>
+            <li><strong>T09-C11</strong> 3인칭 초안과 1인칭 완성본이 나란히 있다.</li>
+            <li><strong>T09-C12</strong> 고난의 시작 지점(연도·장소)이 명시되어 있고, 극복의 물리적 행동이 담겨 있다.</li>
+          </ul>
+        </div>
+      `
+    }
+  ];
+
+  let currentStepIdx = 1; // Default: Step 3 (강점 지도 뽑고, 틀린 것 지우기)
+
+  function renderGuideStep(idx) {
+    if (idx < 0 || idx >= guideSteps.length) return;
+    currentStepIdx = idx;
+    const data = guideSteps[idx];
+    if (guideStepIndicator) guideStepIndicator.textContent = data.step;
+    if (guideModalTitle) guideModalTitle.textContent = data.title;
+    if (guideModalBody) guideModalBody.innerHTML = data.content;
+
+    if (guideBtnPrev) guideBtnPrev.disabled = idx === 0;
+    if (guideBtnNext) guideBtnNext.disabled = idx === guideSteps.length - 1;
+  }
+
+  if (btnOpenGuideModal && guideModalOverlay) {
+    btnOpenGuideModal.addEventListener('click', () => {
+      renderGuideStep(1); // 3단계 카드
+      guideModalOverlay.classList.add('active');
+    });
+  }
+
+  if (guideModalCloseBtn && guideModalOverlay) {
+    guideModalCloseBtn.addEventListener('click', () => {
+      guideModalOverlay.classList.remove('active');
+    });
+  }
+
+  if (guideModalOverlay) {
+    guideModalOverlay.addEventListener('click', (e) => {
+      if (e.target === guideModalOverlay) {
+        guideModalOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  if (guideBtnPrev) {
+    guideBtnPrev.addEventListener('click', () => {
+      if (currentStepIdx > 0) renderGuideStep(currentStepIdx - 1);
+    });
+  }
+
+  if (guideBtnNext) {
+    guideBtnNext.addEventListener('click', () => {
+      if (currentStepIdx < guideSteps.length - 1) renderGuideStep(currentStepIdx + 1);
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && guideModalOverlay && guideModalOverlay.classList.contains('active')) {
+      guideModalOverlay.classList.remove('active');
+    }
+  });
 });
+
